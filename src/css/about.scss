@@ -1,0 +1,194 @@
+@use 'variables.scss' as *;
+
+/* About */
+.about__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 666px;
+  padding: 60px 18px;
+  border-radius: 50px;
+  background: radial-gradient(
+      77.75% 73.99% at 116% 0%,
+      rgba(223, 29, 255, 0.5) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      85.58% 99.15% at 0% 116%,
+      rgba(61, 165, 245, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      98deg,
+      rgba(41, 46, 75, 0.38) 0%,
+      rgba(41, 46, 75, 0.17) 100%,
+      rgba(48, 58, 120, 0.5) 100%
+    );
+
+  backdrop-filter: blur(50px);
+}
+
+.about__img-one {
+  width: 244px;
+  height: 272px;
+}
+
+.about__img-two {
+  width: 328px;
+  height: 261px;
+}
+
+.about__img,
+.about__text,
+.section-title--about-title span {
+  display: none;
+}
+
+.about__img.active,
+.about__text.active,
+.section-title--about-title span.active {
+  display: block;
+}
+
+.section-title--about-title {
+  font-size: 28px;
+}
+
+.about__text {
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $gray-30-color;
+}
+
+.about__buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.about__button-left,
+.about__button-right {
+  flex: 1;
+  height: 29px;
+  padding: 6px 16px;
+  border-radius: 28px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 140%;
+  border: 1px solid $gray-0-color;
+  color: $gray-0-color;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.about__button-left {
+  background: radial-gradient(
+      45.25% 300.92% at 0% 180.88%,
+      rgba(223, 29, 255, 0.5) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      72.82% 200.44% at 111.03% 0%,
+      rgba(61, 165, 245, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      98deg,
+      rgba(41, 46, 75, 0.38) 0%,
+      rgba(41, 46, 75, 0.17) 100%,
+      rgba(48, 58, 120, 0.5) 100%
+    );
+}
+
+.about__button-right {
+  background: radial-gradient(
+      25.15% 300.88% at 95.29% -63.24%,
+      rgba(223, 29, 255, 0.5) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      101.71% 252.68% at -5.37% -16.9%,
+      rgba(61, 165, 245, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      98deg,
+      rgba(41, 46, 75, 0.38) 0%,
+      rgba(41, 46, 75, 0.17) 100%,
+      rgba(48, 58, 120, 0.5) 100%
+    );
+}
+
+@media (min-width: 1280px) {
+  .about__wrapper {
+    flex-direction: row-reverse;
+    margin-top: 72px;
+    justify-content: space-between;
+    height: 444px;
+    padding: 49px 29px 54px 60px;
+   
+  }
+
+  .about__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about__title {
+    font-size: 50px;
+  }
+
+  .about__img-one {
+    width: 472px;
+    height: 419px;
+  }
+
+  .about__img-two {
+    width: 472px;
+    height: 374px;
+  }
+
+  .about__text {
+    width: 481px;
+  }
+
+  .about__buttons {
+    width: 275px;
+    margin-top: 56px;
+  }
+
+  .about__button-left,
+  .about__button-right {
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .about__wrapper {
+    background: radial-gradient(
+        30.75% 85.58% at 100% -16.9%,
+        rgba(223, 29, 255, 0.5) 0%,
+        rgba(72, 205, 255, 0) 100%
+      ),
+      radial-gradient(
+        77.75% 99.15% at -5.37% 106.39%,
+        rgba(61, 165, 245, 0.5) 0%,
+        rgba(62, 69, 238, 0) 100%
+      ),
+      linear-gradient(
+        98deg,
+        rgba(41, 46, 75, 0.38) 0%,
+        rgba(41, 46, 75, 0.17) 100%,
+        rgba(48, 58, 120, 0.5) 100%
+      );
+  }
+}

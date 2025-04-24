@@ -1,0 +1,359 @@
+@use 'variables.scss' as *;
+
+/* Plans section */
+
+.plans__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.plans__wrapper-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.plans__section-description {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.plans__wrapper-cards {
+  display: flex;
+}
+
+.plans__card {
+  position: relative;
+  border-radius: 25px;
+  border: 2px solid #8b8b8b;
+}
+
+.plans__card--one {
+  background: radial-gradient(
+      64.99% 65.39% at -19.32% 59.18%,
+      rgba(223, 29, 255, 0.25) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      77.42% 103.68% at 103.42% -8.18%,
+      rgba(62, 238, 227, 0.3) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      344deg,
+      rgba(41, 46, 75, 0.23) 25.52%,
+      rgba(37, 40, 58, 0.11) 74.08%,
+      rgba(41, 46, 75, 0.11) 74.08%
+    );
+}
+
+.plans__card--two {
+  background: radial-gradient(
+      46.55% 56.79% at 0% 105.61%,
+      rgba(223, 29, 255, 0.35) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      36.2% 43.15% at 103.42% -8.18%,
+      rgba(62, 238, 227, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      98deg,
+      rgba(41, 46, 75, 0.23) 0%,
+      rgba(37, 40, 58, 0.11) 100%,
+      rgba(41, 46, 75, 0.11) 100%
+    );
+}
+
+.plans__card--three {
+  background: radial-gradient(
+      74.55% 80.78% at 55.82% 36.11%,
+      rgba(223, 29, 255, 0.25) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      36.2% 43.15% at 103.42% -8.18%,
+      rgba(62, 238, 227, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      344deg,
+      rgba(41, 46, 75, 0.23) 25.52%,
+      rgba(37, 40, 58, 0.11) 74.08%,
+      rgba(41, 46, 75, 0.11) 74.08%
+    );
+}
+
+.plans__card-inner {
+  border-radius: 25px;
+  backdrop-filter: blur(50px);
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.plans__card-main {
+  padding: 19px 0;
+}
+
+.plans__card-content {
+  padding: 24px 17px;
+  position: relative;
+  z-index: 1;
+}
+
+.plans__card-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  height: 21px;
+  color: $gray-01-color;
+}
+
+.plans__card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  height: 37px;
+  color: $gray-02-color;
+}
+
+.plans__modules-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $gray-06-color;
+}
+
+.plans__price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plans__price-month {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.plans__price {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: $primary-color;
+}
+
+.plans__price span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.plans__price-info {
+  display: flex;
+  gap: 10px;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  color: $gray-02-color;
+}
+
+.plans__price-info p {
+  text-decoration: line-through;
+}
+
+.plans__price-total-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.plans__price-total {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 97px;
+  padding: 2px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $primary-color;
+}
+
+.plans__price-total span {
+  text-decoration: line-through;
+  font-size: 12px;
+  line-height: 1.2;
+  color: $gray-02-color;
+}
+
+.plans__discount {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 0 4px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 2px 0px #e0e5e6 inset;
+  background-color: $yellow-color;
+  color: $gray-09-color;
+}
+
+.plans__divider {
+  height: 1px;
+  background-color: #b5b5b5;
+  margin: 16px 0;
+}
+
+.plans__features {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 18px;
+  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: $gray-01-color;
+}
+
+.plans__features li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.plans__features li::before {
+  content: '•';
+  padding: 0 8px;
+}
+
+.plans__btn {
+  display: block;
+  width: 100%;
+  padding: 13px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  border: none;
+  background: $gradient-color;
+  outline: 1px solid rgba(255, 255, 255, 0.47);
+  color: $gray-10-color;
+}
+
+.plans__btn:hover {
+  background: linear-gradient(110deg, #18c8ff 14.89%, #933ffe 85.85%);
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide swiper-slide-active {
+  display: flex !important;
+  gap: 18px !important;
+  margin-right: 0 !important;
+}
+
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: fit-content !important;
+  height: 10px !important;
+  position: relative !important;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 !important;
+  width: 6px !important;
+  height: 6px !important;
+  background-color: #b4b4b4 !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: $primary-color !important;
+}
+
+.swiper-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.swiper-buttons button {
+  display: flex;
+}
+
+@media (min-width: 1280px) {
+  .plans__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .plans__wrapper-title {
+    margin-bottom: 100px;
+  }
+
+  .plans__section-title {
+    font-size: 50px;
+  }
+
+  .plans__section-description {
+    max-width: 500px;
+    margin: 24px auto 0;
+    font-size: 16px;
+  }
+
+  .plans__card:hover {
+    background: linear-gradient($bg-main-color, $bg-main-color)
+        padding-box,
+      $gradient-border;
+    border: 2px solid transparent;
+    background-size: 200% 200%;
+      box-shadow: 2px 2px 9px 3px rgba(161, 128, 255, 0.30);
+    animation: gradient-border 3s linear infinite;
+    transform: scale(1.05);
+  }
+
+  .plans__card-main {
+    padding: 20px 12px;
+  }
+
+  .plans__card-content {
+    padding: 27px 22px;
+  }
+
+  .swiper {
+    overflow: visible !important;
+  }
+
+  .swiper-buttons {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .swiper {
+    width: 1180px !important;
+  }
+}

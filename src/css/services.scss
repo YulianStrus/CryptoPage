@@ -1,0 +1,168 @@
+@use 'variables.scss' as *;
+
+/* Services section */
+
+.services__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.services__item-wrapper {
+  position: relative;
+  border-radius: 25px;
+}
+
+.services__item-wrapper-bg-odd {
+  background: radial-gradient(
+      68.34% 88.05% at 9.86% -26.12%,
+      rgba(223, 29, 255, 0.35) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      81.18% 98.69% at 113.3% 120.61%,
+      rgba(62, 238, 227, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      98deg,
+      rgba(41, 46, 75, 0.23) 0%,
+      rgba(37, 40, 58, 0.11) 100%,
+      rgba(41, 46, 75, 0.11) 100%
+    );
+}
+
+.services__item-wrapper-bg-even {
+  background: radial-gradient(
+      73.13% 58.33% at 0% 100%,
+      rgba(223, 29, 255, 0.35) 0%,
+      rgba(72, 205, 255, 0) 100%
+    ),
+    radial-gradient(
+      47.8% 57.62% at 97.69% 3.51%,
+      rgba(62, 238, 227, 0.5) 0%,
+      rgba(62, 69, 238, 0) 100%
+    ),
+    linear-gradient(
+      98deg,
+      rgba(41, 46, 75, 0.23) 0%,
+      rgba(37, 40, 58, 0.11) 100%,
+      rgba(41, 46, 75, 0.11) 100%
+    );
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 27px 19px;
+  border-radius: 23px;
+  backdrop-filter: blur(50px);
+  border: 2px solid rgba(233, 236, 239, 0.15);
+}
+
+.services__item-icon {
+  display: none;
+}
+
+.services__item-title {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 130%;
+  color: $gray-0-color;
+}
+
+.services__item-subtitle,
+.services__item-description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgba(233, 236, 239, 0.7);
+}
+
+.services__item-description {
+  color: $gray-30-color;
+}
+
+.services__item-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(76deg, #fff 21.32%, #ababab 84.53%);
+}
+
+.services__item:hover {
+  background: linear-gradient($bg-main-color, $bg-main-color)
+      padding-box,
+    $gradient-border;
+  border: 2px solid transparent;
+  background-size: 200% 200%;
+      box-shadow: 2px 2px 9px 3px rgba(161, 128, 255, 0.30);
+  animation: gradient-border 3s linear infinite;
+}
+
+@media (min-width: 1280px) {
+  .services__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .services__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .services__list::before {
+    content: url(/img/star-4.svg);
+    position: absolute;
+    top: -149px;
+    left: 26px;
+    width: 87px;
+    height: 135px;
+    z-index: 11;
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .services__item {
+    gap: 16px;
+    padding: 19px 24px;
+    border: 2px solid transparent;
+  }
+
+  .services__item-icon {
+    display: block;
+  }
+
+  .services__item-title {
+    font-size: 32px;
+    font-weight: 600;
+    height: 84px;
+  }
+
+  .services__item-subtitle {
+    display: none;
+  }
+
+  .services__item-line {
+    display: none;
+  }
+
+  .services__item-description {
+    color: $gray-50-color;
+  }
+}
+
+@media (min-width: 1920px) {
+  .services__item {
+    padding: 19px 64px;
+  }
+}

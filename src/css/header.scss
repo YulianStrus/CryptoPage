@@ -1,0 +1,103 @@
+@use 'variables.scss' as *;
+
+/* Header styles */
+
+.header__container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.header__container::before {
+  content: url(/img/star-6.svg);
+  position: absolute;
+  right: 90px;
+  bottom: 18px;
+  width: 27px;
+  height: 27px;
+  transform: rotate(-12deg);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.header__burger {
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__btn {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .header__container {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .header__container::before {
+    right: 104px;
+    bottom: -136px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    display: block;
+  }
+
+  .header__nav-list {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    color: $gray-0-color;
+  }
+
+  .header__nav-item:hover {
+    color: $primary-color;
+  }
+
+  .header__btn {
+    display: flex;
+    padding: 13px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    color: $gray-10-color;
+    border: 1px solid rgba(255, 255, 255, 0.47);
+    background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(227deg, #18c8ff 7%, #933ffe 29.53%);
+      box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.5);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+    }
+  }
+}

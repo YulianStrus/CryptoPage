@@ -1,0 +1,23 @@
+@use "sass:math";
+
+$grid_margin: math.percentage(math.div(130, 1920));
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1920px;
+    padding: 0 $grid_margin;
+  }
+}
+
+// @media only screen and (min-width: 1920px) {
+//   .container {
+//     padding: 0 calc($grid_margin + 120px);
+//   }
+// }
