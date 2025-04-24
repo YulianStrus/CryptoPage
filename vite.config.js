@@ -25,6 +25,7 @@ function htmlPartialsPlugin() {
 }
 
 export default defineConfig({
+  base: '/CryptoPage/',
   plugins: [htmlPartialsPlugin()],
   assetsInclude: ['**/*.woff', '**/*.woff2'],
   resolve: {
