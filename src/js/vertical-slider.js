@@ -7,70 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const text = document.querySelector('#active-text');
   const scrollingRow = document.querySelector('.scrolling-row');
 
-  const data = [
-    {
-      title: '1.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '1.Lörem ipsum sosm niliga syntris.',
-    },
-    {
-      title: '2.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '2.Lörem ipsum sosm niliga syntris.',
-    },
-    {
-      title: '3.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '3.Lörem ipsum sosm niliga syntris.',
-    },
-    {
-      title: '4.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '4.Lörem ipsum sosm niliga syntris.',
-    },
-    {
-      title: '5.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '5.Lörem ipsum sosm niliga syntris.',
-    },
-    {
-      title: '6.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '6.Lörem ipsum sosm niliga syntris.',
-    },
-    {
-      title: '7.Lörem ipsum dorade boktig till geosylig postmodern.',
-      text: '7.Lörem ipsum sosm niliga syntris.',
-    },
-  ];
+  const data = Array.from(cards).map(card => ({
+    title: card.getAttribute('data-title') || '',
+    text: card.getAttribute('data-text') || '',
+  }));
 
-  const cardHeight = 150;
+  const cardHeight = cards[0]?.offsetHeight || 150;
   let currentIndex = 0;
 
-  function setInitialCards() {
-    cardsInner.style.transform = 'translateY(0px)';
-    cards.forEach((card, i) => {
-      card.classList.toggle('active', i === 0);
-    });
-    title.textContent = data[0].title;
-    text.textContent = data[0].text;
-  }
-  setInitialCards();
+  const visibleCards = 3;
+const maxIndex = cards.length - visibleCards;
+const maxOffset = -maxIndex * cardHeight;
 
-  function updateCardsPosition(index) {
-    const maxOffset = -(cards.length - 3) * cardHeight;
-    const offset = Math.max(-index * cardHeight, maxOffset);
+function updateCardsPosition(index) {
+  const offset = Math.max(-index * cardHeight, maxOffset);
 
-    cardsInner.style.transform = `translateY(${offset}px)`;
+  cardsInner.style.transform = `translateY(${offset}px)`;
 
-    cards.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
+  cards.forEach((card, i) => {
+    card.classList.toggle('active-slide', i === index);
+  });
 
-    title.textContent = data[index].title;
-    text.textContent = data[index].text;
+  title.textContent = data[index]?.title || '';
+  text.textContent = data[index]?.text || '';
 
-    gsap.fromTo([title, text], { opacity: 0 }, { opacity: 1, duration: 0.3 });
-  }
+  gsap.fromTo([title, text], { opacity: 0 }, { opacity: 1, duration: 0.3 });
+}
 
   ScrollTrigger.create({
     trigger: scrollingRow,
     start: 'center center',
-    end: `+=${cardHeight * (cards.length - 3)}`,
+    end: `+=${cardHeight * maxIndex}`,
     pin: true,
     pinSpacing: true,
     scrub: 1,
@@ -91,4 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
   });
+
+  updateCardsPosition(currentIndex);
 });
