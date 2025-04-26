@@ -307,7 +307,7 @@ h2 {
   }
 
   .vertical-slider__slides {
-    gap: 50px;
+    gap: 0px;
     overflow-y: hidden;
     height: 394px;
     min-height: 394px;
@@ -316,8 +316,11 @@ h2 {
 
   .vertical-slider__slide {
     width: 559px;
-    height: 98px;
+    height: 100px;
     padding: 26px 63px;
+    margin-bottom: 50px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     background: radial-gradient(
         645.96% 80.1% at 106.71% 0%,
         rgba(223, 29, 255, 0.35) 0%,
@@ -352,11 +355,13 @@ h2 {
   height: calc(3 * 150px); // або 450px, якщо картка має 150px
   overflow: hidden;
   position: relative;
+  scroll-snap-type: y mandatory;
 }
 .cards-inner {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  height: calc(9 * 150px); // або взагалі не задавати висоту — гнучко
 }
 
 
