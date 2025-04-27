@@ -35,7 +35,7 @@ h2 {
   position: relative;
 }
 
-.vertical-slider__container::before {
+.decor-wrapper::before {
   content: '';
   position: absolute;
   top: 68px;
@@ -50,7 +50,7 @@ h2 {
   filter: blur(100px);
 }
 
-.vertical-slider__container::after {
+.decor-wrapper::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -242,14 +242,14 @@ h2 {
     padding-bottom: 100px; 
   }
 
-  .vertical-slider__container::before {
+  .decor-wrapper::before {
     top: 264px;
     left: -118px;
     width: 476px;
     height: 278px;
   }
 
-  .vertical-slider__container::after {
+  .decor-wrapper::after {
     top: 5px;
     left: -409px;
     width: 990px;
@@ -319,8 +319,8 @@ h2 {
     height: 100px;
     padding: 26px 63px;
     margin-bottom: 50px;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    // scroll-snap-align: start;
+    // scroll-snap-stop: always;
     background: radial-gradient(
         645.96% 80.1% at 106.71% 0%,
         rgba(223, 29, 255, 0.35) 0%,
@@ -352,10 +352,10 @@ h2 {
 }
 
 .vertical-slider__wrapper {
-  height: calc(3 * 150px); // або 450px, якщо картка має 150px
+  height: calc(3 * 145px); // або 450px, якщо картка має 150px
   overflow: hidden;
   position: relative;
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
 }
 .cards-inner {
   display: flex;
