@@ -1,7 +1,5 @@
 @use 'variables.scss' as *;
 
-/* Vertical slider */
-
 .title {
   position: relative;
   padding: 50px 0;
@@ -319,8 +317,6 @@ h2 {
     height: 100px;
     padding: 26px 63px;
     margin-bottom: 50px;
-    // scroll-snap-align: start;
-    // scroll-snap-stop: always;
     background: radial-gradient(
         645.96% 80.1% at 106.71% 0%,
         rgba(223, 29, 255, 0.35) 0%,
@@ -352,23 +348,21 @@ h2 {
 }
 
 .vertical-slider__wrapper {
-  height: calc(3 * 145px); // або 450px, якщо картка має 150px
+  height: calc(3 * 145px); 
   overflow: hidden;
   position: relative;
-  // scroll-snap-type: y mandatory;
 }
 .cards-inner {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
-  height: calc(9 * 150px); // або взагалі не задавати висоту — гнучко
+  height: calc(9 * 150px);
 }
 
 
 .scrolling-row,
 .pin-spacer,
 .pin-spacer * {
-  // transform: none !important;
   opacity: 1 !important;
   translate: none !important;
   transition: none !important;

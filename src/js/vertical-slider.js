@@ -257,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function destroyMobileSlider() {
-    // Можна тут очистити інтервали або слухачі, якщо потрібно
   }
 
   function setupSlider() {
