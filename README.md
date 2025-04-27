@@ -29,8 +29,7 @@ about the platform's services, tokens, team, and modules.
 
 ```bash
 # Clone repository
-git clone https://github.com/Aleksandr2905/cryptolly.git
-cd cryptolly
+cd CryptPage
 
 # Install dependencies
 npm install
