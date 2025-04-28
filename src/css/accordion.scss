@@ -149,23 +149,7 @@
     // padding: 2px;
     border-radius: 20px;
    
-    background: radial-gradient(
-        81.66% 66.51% at 96.02% 90.71%,
-        rgba(223, 29, 255, 0.4) 0%,
-        rgba(72, 205, 255, 0) 100%
-      ),
-      radial-gradient(
-        51.59% 79.45% at -5.37% -16.9%,
-        rgba(61, 165, 245, 0.5) 12.1%,
-        rgba(62, 238, 227, 0.1) 62.6%,
-        rgba(62, 69, 238, 0) 94.1%
-      ),
-      linear-gradient(
-        98deg,
-        rgba(41, 46, 75, 0.38) 0%,
-        rgba(41, 46, 75, 0.17) 100%,
-        rgba(48, 58, 120, 0.5) 100%
-      );
+    
   }
 
   .accordion__desktop {
@@ -178,6 +162,7 @@
     backdrop-filter: blur(52px);
     position: relative;
     border: 2px solid rgba(181, 181, 181, 0.15);
+    background: linear-gradient(to right bottom, rgba(62, 238, 227, .4) 5%, transparent, transparent, #292E4B 80%, rgba(223, 29, 255, .5) 95%);
   }
 
   .accordion__desktop-line{
